@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
 Mau di enc pun percuma gw gak bisa
 ketik: git pull
@@ -67,7 +65,7 @@ class SSL_TLS:
 		self.link = []
 
 	def Chek(self):
-		self.cek = par(get("https://www.jagoanssh.com/?do=ssh-servers&filter=one-month").text, "html.parser")
+		self.cek = par(get("https://www.jagoanssh.com/?do=ssh-servers&filter=one-month.php").text, "html.parser")
 		for one in self.cek.find_all("div", attrs={"class":"plan-hp"}):
 			for two in one.find_all("h1"):
 				self._nom += 1
@@ -103,7 +101,7 @@ class SSH:
 		self.link = []
 
 	def Chek(self):
-		self.cek = par(get("https://www.jagoanssh.com/?do=ssh-servers&filter=extra").text, "html.parser")
+		self.cek = par(get("https://www.jagoanssh.com/?do=ssh-servers&filter=extra.php").text, "html.parser")
 		for one in self.cek.find_all("div", attrs={"class":"plan-hp"}):
 			reg = re.findall("<h1>(.*?)</h1>", str(one))
 			for judul in reg:
@@ -139,7 +137,7 @@ def Menu():
    \x1b[1;93m ╔═╗╦═╗╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔═╗╦ ╦
     ║  ╠╦╝║╣ ╠═╣ ║ ║╣   ╚═╗╚═╗╠═╣
     ╚═╝╩╚═╚═╝╩ ╩ ╩ ╚═╝  ╚═╝╚═╝╩ ╩
-\x1b[1;97m     https://github.com/hekelpro
+\x1b[1;97m     LUAR BIASA
 \x1b[1;91m+-----------------------------------+
 \x1b[1;96m  {\x1b[1;92m01\x1b[1;96m} \x1b[1;97mCREATE SSL/TLS ws 1bulan
 \x1b[1;96m  {\x1b[1;92m02\x1b[1;96m} \x1b[1;97mCREATE SSH ws 7 hari
